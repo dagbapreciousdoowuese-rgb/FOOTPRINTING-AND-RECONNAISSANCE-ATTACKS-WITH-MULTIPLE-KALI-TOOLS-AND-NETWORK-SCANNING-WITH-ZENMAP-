@@ -78,7 +78,8 @@ I started with WHOIS to retrieve the publicly available registration information
 
 Command executed:
 
-,,,bash whois networkwalks.com ,,,bash
+,,,bash 
+whois networkwalks.com
 
 
 The output provided information about the domain registrar, registration and expiry dates, domain status and authoritative name servers.
