@@ -1,7 +1,6 @@
-Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap
+** WEEK 2: Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap**
 
-Cybersecurity Internship Program — NETWORKWALKS
-
+**Networkwalks Cybersecurity Programme | Practical Project 2**
 
 
 | Field | Detail |
@@ -17,7 +16,7 @@ Cybersecurity Internship Program — NETWORKWALKS
 
 ---
 
-1. LIABILITY DISCLAIMER
+**1. LIABILITY DISCLAIMER**
 
 All activities documented in this report were carried out for educational purposes within the scope of authorised cybersecurity exercises. I performed the assessment against the specified domain with permission and conducted the internal network scans within my own virtualised lab environment.
 
@@ -25,7 +24,7 @@ The commands, tools and findings presented here are intended to demonstrate prac
 
 I understand that unauthorised access to computer systems and networks can have serious legal and professional consequences. All activities described in this report were undertaken with respect for applicable laws and ethical hacking principles.
 
-2. INTRODUCTION
+**2. INTRODUCTION**
 
 Week 2 of my Cybersecurity Internship at Networkwalks was centred on two important areas of practical cybersecurity: footprinting and reconnaissance, followed by network scanning and discovery.
 
@@ -61,7 +60,7 @@ The following tools and environments were used throughout the two modules.
 | **Windows Command Prompt (`ipconfig`)** | Used to inspect the Windows host's network configuration. |
 
 
-4. ACTIVITIES PERFORMED
+**4. ACTIVITIES PERFORMED**
 
 4.1 W2-PM1: FOOTPRINTING AND RECONNAISSANCE USING KALI LINUX
 
@@ -71,71 +70,35 @@ My task was to investigate networkwalks.com using six Kali Linux tools and docum
 
 I carried out the following activities.
 
-4.1.1 WHOIS – Domain Registration Lookup
-
 I started with WHOIS to retrieve the publicly available registration information associated with networkwalks.com.
 
-Command executed:
+I executed the command:
 
 ```bash
 whois networkwalks.com
 ```
 
-
-
-
-
 The output provided information about the domain registrar, registration and expiry dates, domain status and authoritative name servers.
+With this exercise, I was able to understand how domain registration information can reveal details about the organisations and infrastructure associated with a website. Next, I used WhatWeb to identify the technologies running on the target website.
 
-Some of the details I identified were:
-
-- Registrar: GoDaddy.com, LLC
-- Creation Date: 6 November 2019
-- Expiry Date: 6 November 2027
-- Name Server 1: NS6135.HOSTGATOR.COM
-- Name Server 2: NS6136.HOSTGATOR.COM
-
-This exercise helped me understand how domain registration information can reveal details about the organisations and infrastructure associated with a website.
-
-4.1.2 WhatWeb – Website Technology Fingerprinting
-
-Next, I used WhatWeb to identify the technologies running on the target website.
-
-Command executed:
+I executed the command:
 
 ```bash
-whatweb networkwalks.com
+whatweb networkwalks.com 
 ```
 
 The scan returned information about the web server, content management system, JavaScript libraries and plugins.
 
-The technologies identified included:
-
-- Web Server: Apache HTTP Server
-- Server IP: 192.232.216.135
-- WordPress: 7.0.4
-- Bootstrap: 7.0.4
-- jQuery: 3.7.1
-- WordPress Download Manager: 3.3.58
-- Contact Email: info@networkwalks.com
-
 This was particularly interesting because it showed me how much information a website can reveal through technology fingerprinting.
-
 I also learned why identifying software versions matters in cybersecurity. Security professionals can compare discovered versions with publicly documented security advisories to determine whether further investigation is necessary.
 
-4.1.3 Nslookup – DNS Resolution
-
-For the third task, I used nslookup to determine the IP address associated with the domain.
-
-Command executed:
+For the third task, I used nslookup to determine the IP address associated with the domain. I executed the command:
 
 ```bash
 nslookup networkwalks.com
 ```
 
-The query was resolved through Google Public DNS (8.8.8.8).
-
-Result:
+The query was resolved through Google Public DNS (8.8.8.8) and the result was:
 
 ```bash
 192.232.216.135
@@ -143,13 +106,8 @@ Result:
 
 This confirmed the IPv4 address returned for networkwalks.com during my assessment.
 
-This exercise helped me understand the relationship between domain names, IP addresses and DNS resolution.
-
-4.1.4 Curl – HTTP Response Header Inspection
-
 I then used curl to examine the HTTP response headers returned by the website.
-
-Command executed:
+I executed the command:
 
 ```bash
 curl -I https://networkwalks.com
@@ -177,13 +135,10 @@ One of the interesting details was the reference to:
 
 This is associated with the WordPress REST API.
 
-This task helped me understand that HTTP response headers can provide useful information about a website even without downloading and examining its entire page.
-
-4.1.5 Wafw00f – Web Application Firewall Detection
+With this task, I understood that HTTP response headers can provide useful information about a website even without downloading and examining its entire page.
 
 For the fifth task, I used wafw00f to investigate whether a Web Application Firewall was protecting the target website.
-
-Command executed:
+I executed the command:
 
 ```bash
 wafw00f networkwalks.com
@@ -193,15 +148,11 @@ The result identified:
 
 ModSecurity (SpiderLabs)
 
-This indicated that the website was protected by a Web Application Firewall.
-
-Before this exercise, I understood what a firewall was in general terms, but this practical task helped me appreciate the role of WAFs in protecting web applications by monitoring and filtering potentially harmful HTTP requests.
-
-4.1.6 DNSRecon – DNS Enumeration
+This indicated that the website was protected by a Web Application Firewall. Before this project, I understood what a firewall was in general terms, but this practical task helped me appreciate the role of WAFs in protecting web applications by monitoring and filtering potentially harmful HTTP requests.
 
 The final task in this module involved examining the DNS records associated with the domain.
 
-Command executed:
+I executed the command:
 
 ```bash
 dnsrecon -d networkwalks.com
