@@ -1,4 +1,4 @@
-** WEEK 2: Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap**
+**WEEK 2: Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap**
 
 **Networkwalks Cybersecurity Programme | Practical Project 2**
 
