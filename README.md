@@ -465,6 +465,12 @@ dnsrecon output
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d8c0b005-98d2-4c9e-984c-efa9da39531c" />
 Wafw00f output
 
+<img width="1452" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b2c1923-80c4-41ed-9d9a-b68db8095fb2" />
+
+
+
+
+
 Zenmap/Nmap Ping Scan 
 
 
