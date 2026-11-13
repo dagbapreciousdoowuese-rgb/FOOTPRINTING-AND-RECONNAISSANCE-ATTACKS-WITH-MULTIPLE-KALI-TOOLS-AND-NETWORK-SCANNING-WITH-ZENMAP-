@@ -444,24 +444,22 @@ The following evidence was collected during the practical exercises to support t
 
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cdd8e15d-46bd-4269-a699-f25dbd49fa89" />
-
-Evidence 1| W2-PM1| WHOIS output showing domain registration details, GoDaddy registrar and HostGator name servers.
+WHOIS output
 
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1fa85f17-58c7-4ffe-ab16-590d892961db" />
-
-Evidence 2| W2-PM1| WhatWeb output identifying Apache, WordPress 7.0.4 and WP Download Manager 3.3.58, among other technologies.
+WhatWeb output
 
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3515667f-f079-4d20-8085-6516d50e429d" />
-
-Evidence 3| W2-PM1| nslookup output confirming the IPv4 address 192.232.216.135.
+nslookup output
 
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e628e8a9-8c57-4872-a3e6-2d4866bc7d62" />
+Curl HTTP response
 
-Evidence 4| W2-PM1| Curl HTTP response headers showing HTTP/2 200 OK and the WordPress REST API reference.
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f03e936-447e-45f3-ae0b-f4dfc2ea5dce" />
+dnsrecon output
 
 
 Evidence 5| W2-PM1| Wafw00f output identifying ModSecurity (SpiderLabs).
