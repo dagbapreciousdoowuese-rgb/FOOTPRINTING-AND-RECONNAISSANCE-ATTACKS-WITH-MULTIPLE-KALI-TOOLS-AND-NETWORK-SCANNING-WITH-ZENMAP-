@@ -138,7 +138,9 @@ The query was resolved through Google Public DNS (8.8.8.8).
 
 Result:
 
+```bash
 192.232.216.135
+```
 
 This confirmed the IPv4 address returned for networkwalks.com during my assessment.
 
@@ -156,7 +158,9 @@ curl -I https://networkwalks.com
 
 The server returned:
 
+```bash
 HTTP/2 200 OK
+```
 
 The response also exposed several pieces of information, including:
 
@@ -168,7 +172,9 @@ The response also exposed several pieces of information, including:
 
 One of the interesting details was the reference to:
 
+```bash
 /wp-json/
+```
 
 This is associated with the WordPress REST API.
 
@@ -250,23 +256,31 @@ After the initial difficulties, I decided to carry out the scan directly inside 
 
 My lab network was configured around the following subnet:
 
+```bash
 10.0.0.0/24
+```
 
 I also checked that DHCP was enabled on the VirtualBox network configuration.
 
 To inspect the network interface inside Kali Linux, I executed:
 
+```bash
 ip addr show
+```
 
 This allowed me to examine the available interfaces and their assigned addresses.
 
 I confirmed that my Kali Linux virtual machine had the following IPv4 address:
 
+```bash
 10.0.0.3
+```
 
 The address belonged to the:
 
+```bash
 10.0.0.0/24
+```
 
 subnet.
 
@@ -280,7 +294,9 @@ With the network configuration verified, I proceeded to perform a Ping Scan usin
 
 Scan command:
 
+```bash
 nmap -sn 10.0.0.0/24
+```
 
 The "-sn" option instructs Nmap to perform host discovery without carrying out a port scan.
 
@@ -288,15 +304,16 @@ In simple terms, I was checking which devices were responding on the subnet rath
 
 The scan was performed on 13 November 2026 at 11:23 (-0500).
 
-Scan summary:
+### Scan Summary
 
-Scan Information| Result
-Target Subnet| 10.0.0.0/24
-Total IP Addresses Scanned| 256
-Scan Duration| 3.07 seconds
-Live Hosts Discovered| 3
-Scanning Machine| Kali Linux VM
-Scanning Machine IP| 10.0.0.3
+| Scan Information | Result |
+| :--- | :--- |
+| **Target Subnet** | `10.0.0.0/24` |
+| **Total IP Addresses Scanned** | 256 |
+| **Scan Duration** | 3.07 seconds |
+| **Live Hosts Discovered** | 3 |
+| **Scanning Machine** | Kali Linux VM |
+| **Scanning Machine IP** | `10.0.0.3` |
 
 4.2.4 Identifying the Live Hosts
 
@@ -304,10 +321,15 @@ The scan successfully identified three live hosts within the lab subnet.
 
 The results were:
 
-Host| IPv4 Address| MAC Address| Vendor / Description
-Host 1| 10.0.0.1| 52:54:00:12:35:00| QEMU virtual NIC
-Host 2| 10.0.0.2| 08:00:27:D9:21:01| Oracle VirtualBox virtual NIC
-Host 3 (Local VM)| 10.0.0.3| Not displayed| Kali Linux Guest VM
+### 4.2.4 Identifying the Live Hosts
+
+The scan successfully identified three live hosts within the lab subnet (`10.0.0.0/24`).
+
+| Host | IPv4 Address | MAC Address | Vendor / Description |
+| :--- | :--- | :--- | :--- |
+| **Host 1** | `10.0.0.1` | `52:54:00:12:35:00` | QEMU virtual NIC |
+| **Host 2** | `10.0.0.2` | `08:00:27:D9:21:01` | Oracle VirtualBox virtual NIC |
+| **Host 3 (Local VM)** | `10.0.0.3` | Not displayed | Kali Linux Guest VM |
 
 The first host was identified as a QEMU virtual network interface, while the second was identified as an Oracle VirtualBox virtual network interface.
 
@@ -339,15 +361,21 @@ When I initially tried to save the topology, Zenmap populated the save location 
 
 The default location appeared as:
 
+```bash
 Desktop/.pdf
+```
 
 Since I was already working inside:
 
+```bash
 /home/kali/Desktop
+```
 
 the application attempted to access:
 
+```bash
 /home/kali/Desktop/Desktop
+```
 
 That directory did not exist, so the save operation returned a filesystem path error.
 
@@ -355,7 +383,9 @@ I had to go back and examine the save location rather than repeat the same actio
 
 I resolved the issue by clearing the incorrect path, entering a clean filename and saving the file as:
 
+```bash
 topology.pdf
+```
 
 I saved the exported topology to my Kali Linux Desktop and subsequently transferred the PDF to my Windows host machine for documentation.
 
@@ -373,13 +403,19 @@ The information gathered during both exercises provided an opportunity to identi
 
 The observations below are potential security considerations, not confirmed vulnerabilities.
 
-No.| Observation| Evidence| Potential Security Implication| Assessed Risk
-1| Website technology information is publicly identifiable.| WhatWeb identified Apache, WordPress, Bootstrap, jQuery and WP Download Manager versions.| Publicly identifiable software versions can help attackers research known vulnerabilities affecting those technologies.| Medium
-2| The website's origin IP address is identifiable.| nslookup and WhatWeb returned 192.232.216.135.| The hosting infrastructure may be exposed to direct investigation, depending on the surrounding network protections.| Low
-3| HTTP response headers expose server and API information.| Curl returned Apache identification and a WordPress REST API reference.| This information can assist further technology and endpoint enumeration.| Low
-4| The Web Application Firewall can be identified.| Wafw00f detected ModSecurity (SpiderLabs).| Knowledge of the WAF technology can help an attacker understand the website's defensive setup.| Low
-5| Public DNS information is available.| WHOIS and DNSRecon returned name server and other DNS information.| DNS information can help an attacker map hosting and email infrastructure and research possible weaknesses.| Medium
-6| Multiple virtual hosts are visible on the internal lab subnet.| Nmap discovered three live hosts on 10.0.0.0/24.| Unauthorised devices on an insufficiently monitored internal network could introduce security risks.| Medium
+## Risk Analysis / Impact
+
+Based on the reconnaissance and network discovery findings collected during this assessment, the following security observations and potential risks were identified:
+
+| No. | Observation | Evidence | Potential Security Implication | Assessed Risk |
+| :---: | :--- | :--- | :--- | :--- |
+| **1** | Website technology information is publicly identifiable. | WhatWeb identified Apache, WordPress, Bootstrap, jQuery and WP Download Manager versions. | Publicly identifiable software versions can help attackers research known vulnerabilities affecting those technologies. | **Medium** |
+| **2** | The website's origin IP address is identifiable. | `nslookup` and WhatWeb returned `192.232.216.135`. | The hosting infrastructure may be exposed to direct investigation, depending on the surrounding network protections. | **Low** |
+| **3** | HTTP response headers expose server and API information. | `curl` returned Apache identification and a WordPress REST API reference. | This information can assist further technology and endpoint enumeration. | **Low** |
+| **4** | The Web Application Firewall can be identified. | `wafw00f` detected ModSecurity (SpiderLabs). | Knowledge of the WAF technology can help an attacker understand the website's defensive setup. | **Low** |
+| **5** | Public DNS information is available. | WHOIS and DNSRecon returned name server and other DNS information. | DNS information can help an attacker map hosting and email infrastructure and research possible weaknesses. | **Medium** |
+| **6** | Multiple virtual hosts are visible on the internal lab subnet. | Nmap discovered three live hosts on `10.0.0.0/24`. | Unauthorised devices on an insufficiently monitored internal network could introduce security risks. | **Medium** |
+
 
 Risk classification: Critical | Medium | Low.
 
