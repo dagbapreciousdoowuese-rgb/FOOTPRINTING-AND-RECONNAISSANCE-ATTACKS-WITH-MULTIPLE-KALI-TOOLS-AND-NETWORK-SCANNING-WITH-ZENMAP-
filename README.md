@@ -448,7 +448,7 @@ The following evidence was collected during the practical exercises to support t
 Evidence 1| W2-PM1| WHOIS output showing domain registration details, GoDaddy registrar and HostGator name servers.
 
 
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1fa85f17-58c7-4ffe-ab16-590d892961db" />
 
 Evidence 2| W2-PM1| WhatWeb output identifying Apache, WordPress 7.0.4 and WP Download Manager 3.3.58, among other technologies.
 
