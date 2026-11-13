@@ -130,7 +130,9 @@ For the third task, I used nslookup to determine the IP address associated with 
 
 Command executed:
 
+```bash
 nslookup networkwalks.com
+```
 
 The query was resolved through Google Public DNS (8.8.8.8).
 
@@ -148,7 +150,9 @@ I then used curl to examine the HTTP response headers returned by the website.
 
 Command executed:
 
+```bash
 curl -I https://networkwalks.com
+```
 
 The server returned:
 
@@ -176,7 +180,9 @@ For the fifth task, I used wafw00f to investigate whether a Web Application Fire
 
 Command executed:
 
+```bash
 wafw00f networkwalks.com
+```
 
 The result identified:
 
@@ -192,7 +198,9 @@ The final task in this module involved examining the DNS records associated with
 
 Command executed:
 
+```bash
 dnsrecon -d networkwalks.com
+```
 
 DNSRecon returned information relating to the domain's DNS configuration, including name servers, mail exchange records, TXT records and other available service records.
 
@@ -226,7 +234,7 @@ My objectives were to:
 
 I initially attempted to carry out the network scan using Zenmap on my Windows host machine.
 
-However, I encountered two major problems.
+But, I encountered two major problems.
 
 First, the scan returned zero active hosts in some attempts. Secondly, I could not obtain the MAC addresses of the discovered devices.
 
