@@ -78,7 +78,7 @@ I started with WHOIS to retrieve the publicly available registration information
 
 Command executed:
 
-,,,bash 
+’’’bash 
 whois networkwalks.com
 
 
