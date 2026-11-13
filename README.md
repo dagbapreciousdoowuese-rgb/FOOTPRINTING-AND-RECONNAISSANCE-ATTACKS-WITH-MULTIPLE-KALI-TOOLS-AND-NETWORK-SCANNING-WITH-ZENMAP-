@@ -458,7 +458,7 @@ Evidence 2| W2-PM1| WhatWeb output identifying Apache, WordPress 7.0.4 and WP Do
 Evidence 3| W2-PM1| nslookup output confirming the IPv4 address 192.232.216.135.
 
 
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e628e8a9-8c57-4872-a3e6-2d4866bc7d62" />
 
 Evidence 4| W2-PM1| Curl HTTP response headers showing HTTP/2 200 OK and the WordPress REST API reference.
 
