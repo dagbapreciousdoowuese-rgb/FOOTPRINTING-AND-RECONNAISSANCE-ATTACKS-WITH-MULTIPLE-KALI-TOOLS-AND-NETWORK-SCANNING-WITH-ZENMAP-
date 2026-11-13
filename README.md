@@ -1,4 +1,4 @@
-** WEEK 2: Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c6ad3fc-768a-42f9-a1c4-65276d80fb15" />** WEEK 2: Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap**
 
 **Networkwalks Cybersecurity Programme | Practical Project 2**
 
@@ -467,6 +467,8 @@ Wafw00f output
 
 <img width="1452" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b2c1923-80c4-41ed-9d9a-b68db8095fb2" />
 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/59291f16-8706-4d68-ab18-899e6bf74409" />
 
 
 
