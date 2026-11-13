@@ -5,7 +5,6 @@ Cybersecurity Internship Program — NETWORKWALKS
 
 
 
-
 | Field | Detail |
 | :--- | :--- |
 | **Pentester Name (Cybersecurity Professional)** | Precious Doowuese Dagba |
