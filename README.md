@@ -453,7 +453,7 @@ Evidence 1| W2-PM1| WHOIS output showing domain registration details, GoDaddy re
 Evidence 2| W2-PM1| WhatWeb output identifying Apache, WordPress 7.0.4 and WP Download Manager 3.3.58, among other technologies.
 
 
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3515667f-f079-4d20-8085-6516d50e429d" />
 
 Evidence 3| W2-PM1| nslookup output confirming the IPv4 address 192.232.216.135.
 
