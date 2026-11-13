@@ -462,14 +462,13 @@ Curl HTTP response
 dnsrecon output
 
 
-Evidence 5| W2-PM1| Wafw00f output identifying ModSecurity (SpiderLabs).
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d8c0b005-98d2-4c9e-984c-efa9da39531c" />
+Wafw00f output
+
+Zenmap/Nmap Ping Scan 
 
 
-
-Evidence 6| W2-PM5| Zenmap/Nmap Ping Scan showing three live hosts on 10.0.0.0/24, including the available MAC addresses.
-
-
-Evidence 7| W2-PM5| Exported network topology diagram (topology.pdf) with the legend enabled.
+Exported network topology
 
 
 
