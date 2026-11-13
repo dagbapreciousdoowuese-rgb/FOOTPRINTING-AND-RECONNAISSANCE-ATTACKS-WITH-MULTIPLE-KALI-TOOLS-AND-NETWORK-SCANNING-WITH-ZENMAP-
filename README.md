@@ -80,3 +80,30 @@ Command executed:
 
 ```bash
 whatweb networkwalks.com
+
+
+
+
+
+
+
+The output provided information about the domain registrar, registration and expiry dates, domain status and authoritative name servers.
+
+Some of the details I identified were:
+
+- Registrar: GoDaddy.com, LLC
+- Creation Date: 6 November 2019
+- Expiry Date: 6 November 2027
+- Name Server 1: NS6135.HOSTGATOR.COM
+- Name Server 2: NS6136.HOSTGATOR.COM
+
+This exercise helped me understand how domain registration information can reveal details about the organisations and infrastructure associated with a website.
+
+4.1.2 WhatWeb – Website Technology Fingerprinting
+
+Next, I used WhatWeb to identify the technologies running on the target website.
+
+Command executed:
+
+whatweb networkwalks.com
+
