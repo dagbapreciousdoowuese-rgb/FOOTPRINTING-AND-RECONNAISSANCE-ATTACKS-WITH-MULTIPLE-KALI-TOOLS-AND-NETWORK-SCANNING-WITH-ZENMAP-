@@ -35,6 +35,7 @@ I worked on two project modules: W2-PM1, which involved investigating the public
 
 For the first module, I worked with six reconnaissance tools: WHOIS, WhatWeb, nslookup, curl, wafw00f and dnsrecon. Each tool helped me understand a different aspect of the target domain, including its registration details, hosting information, web technologies, DNS configuration, HTTP response headers and firewall protection.
 
+
 The second module introduced me to practical network discovery. I initially attempted to perform the scan from my Windows host using Zenmap, but I encountered issues with host discovery and MAC address identification. Rather than proceeding with incomplete results, I investigated the network configuration and eventually moved the scanning activity into my Kali Linux virtual machine.
 
 Working within my VirtualBox lab environment, I verified the network interface, checked the IP configuration and performed a Ping Scan on the 10.0.0.0/24 subnet.
