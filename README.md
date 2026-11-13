@@ -438,18 +438,46 @@ I also became more comfortable moving between Windows and Kali Linux, checking n
 
 8. EVIDENCE AND DOCUMENTATION
 
+
 The following evidence was collected during the practical exercises to support the activities and findings documented in this report.
 
-Evidence| Module| Description
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cdd8e15d-46bd-4269-a699-f25dbd49fa89" />
+
 Evidence 1| W2-PM1| WHOIS output showing domain registration details, GoDaddy registrar and HostGator name servers.
+
+
+
+
 Evidence 2| W2-PM1| WhatWeb output identifying Apache, WordPress 7.0.4 and WP Download Manager 3.3.58, among other technologies.
+
+
+
+
 Evidence 3| W2-PM1| nslookup output confirming the IPv4 address 192.232.216.135.
+
+
+
+
 Evidence 4| W2-PM1| Curl HTTP response headers showing HTTP/2 200 OK and the WordPress REST API reference.
+
+
+
 Evidence 5| W2-PM1| Wafw00f output identifying ModSecurity (SpiderLabs).
+
+
+
 Evidence 6| W2-PM5| Zenmap/Nmap Ping Scan showing three live hosts on 10.0.0.0/24, including the available MAC addresses.
+
+
 Evidence 7| W2-PM5| Exported network topology diagram (topology.pdf) with the legend enabled.
 
+
+
 The evidence files accompany this report to provide a record of the practical activities performed.
+
+
 
 9. CONCLUSION
 
