@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c6ad3fc-768a-42f9-a1c4-65276d80fb15" />** WEEK 2: Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap**
+** WEEK 2: Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap**
 
 **Networkwalks Cybersecurity Programme | Practical Project 2**
 
@@ -62,7 +62,7 @@ The following tools and environments were used throughout the two modules.
 
 **4. ACTIVITIES PERFORMED**
 
-4.1 W2-PM1: FOOTPRINTING AND RECONNAISSANCE USING KALI LINUX
+ **W2-PM1: FOOTPRINTING AND RECONNAISSANCE USING KALI LINUX**
 
 The first module introduced me to the information-gathering stage of ethical hacking.
 
@@ -70,18 +70,14 @@ My task was to investigate networkwalks.com using six Kali Linux tools and docum
 
 I carried out the following activities.
 
-I started with WHOIS to retrieve the publicly available registration information associated with networkwalks.com.
-
-I executed the command:
+I started with WHOIS to retrieve the publicly available registration information associated with networkwalks.com. I executed the command:
 
 ```bash
 whois networkwalks.com
 ```
 
 The output provided information about the domain registrar, registration and expiry dates, domain status and authoritative name servers.
-With this exercise, I was able to understand how domain registration information can reveal details about the organisations and infrastructure associated with a website. Next, I used WhatWeb to identify the technologies running on the target website.
-
-I executed the command:
+With this exercise, I was able to understand how domain registration information can reveal details about the organisations and infrastructure associated with a website. Next, I used whatweb to identify the technologies running on the target website. I executed the command:
 
 ```bash
 whatweb networkwalks.com 
@@ -89,7 +85,7 @@ whatweb networkwalks.com
 
 The scan returned information about the web server, content management system, JavaScript libraries and plugins.
 
-This was particularly interesting because it showed me how much information a website can reveal through technology fingerprinting.
+This was especially interesting because it showed me how much information a website can reveal through technology fingerprinting.
 I also learned why identifying software versions matters in cybersecurity. Security professionals can compare discovered versions with publicly documented security advisories to determine whether further investigation is necessary.
 
 For the third task, I used nslookup to determine the IP address associated with the domain. I executed the command:
@@ -150,7 +146,7 @@ ModSecurity (SpiderLabs)
 
 This indicated that the website was protected by a Web Application Firewall. Before this project, I understood what a firewall was in general terms, but this practical task helped me appreciate the role of WAFs in protecting web applications by monitoring and filtering potentially harmful HTTP requests.
 
-The final task in this module involved examining the DNS records associated with the domain.
+The final task in this module was to examine the DNS records associated with the domain.
 
 I executed the command:
 
@@ -158,25 +154,21 @@ I executed the command:
 dnsrecon -d networkwalks.com
 ```
 
-DNSRecon returned information relating to the domain's DNS configuration, including name servers, mail exchange records, TXT records and other available service records.
+dnsrecon returned information relating to the domain's DNS configuration, including name servers, mail exchange records, TXT records and other available service records. athis task introduced me to different DNS record types and their importance in understanding how a website's domain and associated services are configured. It also helped me understand how DNS information can be useful during the reconnaissance stage of a security assessment.
 
-The exercise introduced me to different DNS record types and their importance in understanding how a website's domain and associated services are configured.
+**Outcome of W2-PM1:**
 
-It also helped me understand how DNS information can be useful during the reconnaissance stage of a security assessment.
-
-Outcome of W2-PM1:
-
-I completed the six reconnaissance exercises and gained practical experience using different Kali Linux tools to investigate publicly available information about a website.
+I completed the six reconnaissance tasks and gained practical experience using different Kali Linux tools to investigate publicly available information about a website.
 
 ---
 
-4.2 W2-PM5: NETWORK SCANNING AND DISCOVERY WITH ZENMAP AND NMAP
+**W2-PM5: NETWORK SCANNING AND DISCOVERY WITH ZENMAP AND NMAP**
 
-The second module focused on identifying active devices within a local network.
+This project focused on identifying active devices within a local network.
 
-Unlike the first module, which involved investigating a public domain, this exercise required me to examine my internal VirtualBox lab network.
+Unlike the first project, which involved investigating a public domain, this task required me to examine my internal VirtualBox lab network.
 
-My objectives were to:
+**My objectives were to:**
 
 - Identify my local IP address.
 - Determine the network subnet.
@@ -186,7 +178,7 @@ My objectives were to:
 - Retrieve available MAC addresses.
 - Generate and export a network topology diagram.
 
-4.2.1 Initial Attempt and Troubleshooting
+**Initial Attempt and Troubleshooting**
 
 I initially attempted to carry out the network scan using Zenmap on my Windows host machine.
 
@@ -196,11 +188,9 @@ First, the scan returned zero active hosts in some attempts. Secondly, I could n
 
 Rather than assuming that the network was empty or that the scanning tool was faulty, I decided to investigate the network configuration.
 
-One important thing I had to understand was that MAC address discovery through ARP works within the local Layer 2 network segment. A scanner operating outside that segment may not be able to retrieve the hardware addresses of the target devices directly.
+One important thing I had to understand was that MAC address discovery through ARP works within the local Layer 2 network segment. A scanner operating outside that segment may not be able to retrieve the hardware addresses of the target devices directly. This made me reconsider where I was running the scan from.
 
-This made me reconsider where I was running the scan from.
-
-4.2.2 Moving the Scanning Activity into Kali Linux
+**Moving the Scanning Activity into Kali Linux**
 
 After the initial difficulties, I decided to carry out the scan directly inside my Kali Linux virtual machine.
 
@@ -231,26 +221,23 @@ The address belonged to the:
 ```bash
 10.0.0.0/24
 ```
-
 subnet.
 
 This confirmed that my Kali VM was operating within the lab network I intended to scan.
 
 Running the scan from inside Kali Linux also gave me the opportunity to perform local network discovery with the appropriate privileges.
 
-4.2.3 Performing the Network Scan
+**Performing the Network Scan**
 
 With the network configuration verified, I proceeded to perform a Ping Scan using Zenmap/Nmap.
 
-Scan command:
+I executed the scan command:
 
 ```bash
 nmap -sn 10.0.0.0/24
 ```
 
-The "-sn" option instructs Nmap to perform host discovery without carrying out a port scan.
-
-In simple terms, I was checking which devices were responding on the subnet rather than examining their open ports.
+The "-sn" option instructs Nmap to perform host discovery without carrying out a port scan. In simple terms, I was checking which devices were responding on the subnet rather than examining their open ports.
 
 The scan was performed on 13 November 2026 at 11:23 (-0500).
 
@@ -265,13 +252,7 @@ The scan was performed on 13 November 2026 at 11:23 (-0500).
 | **Scanning Machine** | Kali Linux VM |
 | **Scanning Machine IP** | `10.0.0.3` |
 
-4.2.4 Identifying the Live Hosts
-
-The scan successfully identified three live hosts within the lab subnet.
-
-The results were:
-
-### 4.2.4 Identifying the Live Hosts
+**Identifying the Live Hosts**
 
 The scan successfully identified three live hosts within the lab subnet (`10.0.0.0/24`).
 
@@ -287,9 +268,9 @@ My Kali Linux virtual machine was the third live host and the machine from which
 
 An important observation was that Nmap did not display the MAC address of my own scanning machine in the results. I therefore documented it as unavailable rather than assuming or assigning an address.
 
-4.2.5 Understanding the Results
+**Understanding the Results**
 
-This exercise helped me connect some networking concepts I had previously studied with what actually happens during a network scan.
+This project helped me connect some networking concepts I had previously studied with what actually happens during a network scan.
 
 For instance:
 
@@ -301,13 +282,11 @@ For instance:
 
 Seeing these details returned by an actual scan made the concepts much easier to understand.
 
-4.2.6 Exporting the Network Topology to PDF
+**Exporting the Network Topology to PDF**
 
 After completing the scan, I proceeded to generate the network topology diagram.
 
-This was another part of the exercise that required some troubleshooting.
-
-When I initially tried to save the topology, Zenmap populated the save location with an incorrect path.
+This was another part of the project that required some troubleshooting. When I initially tried to save the topology, Zenmap populated the save location with an incorrect path.
 
 The default location appeared as:
 
@@ -327,9 +306,7 @@ the application attempted to access:
 /home/kali/Desktop/Desktop
 ```
 
-That directory did not exist, so the save operation returned a filesystem path error.
-
-I had to go back and examine the save location rather than repeat the same action.
+That directory did not exist, so the save operation returned a filesystem path error. I had to go back and examine the save location rather than repeat the same action.
 
 I resolved the issue by clearing the incorrect path, entering a clean filename and saving the file as:
 
@@ -341,15 +318,15 @@ I saved the exported topology to my Kali Linux Desktop and subsequently transfer
 
 I also enabled the topology legend as instructed in the project guide.
 
-Outcome of W2-PM5:
+**Outcome of W2-PM5:**
 
 I successfully discovered three live hosts on my internal VirtualBox lab subnet, identified two MAC addresses and their associated virtual network interface vendors, and exported the network topology diagram as a PDF.
 
 ---
 
-5. RISK ANALYSIS AND SECURITY OBSERVATIONS
+**5. RISK ANALYSIS AND SECURITY OBSERVATIONS**
 
-The information gathered during both exercises provided an opportunity to identify areas that could be relevant during a security assessment.
+The information gathered during both projects provided an opportunity to identify areas that could be relevant during a security assessment.
 
 The observations below are potential security considerations, not confirmed vulnerabilities.
 
@@ -373,7 +350,7 @@ The findings from this assessment represent information gathered during reconnai
 
 No intrusive exploitation, password attacks or denial-of-service activities were performed as part of these Week 2 exercises.
 
-6. RECOMMENDATIONS
+**6. RECOMMENDATIONS**
 
 Based on the information gathered, I identified several areas that organisations can pay attention to when reviewing their security posture.
 
@@ -386,7 +363,7 @@ Based on the information gathered, I identified several areas that organisations
 7. Monitor virtualised network environments: When working with virtual machines, it is important to understand the network mode, subnet configuration and Layer 2 connectivity before performing network discovery.
 8. Verify scan results: Security professionals should investigate unexpected results and confirm network configurations rather than immediately assuming that a scan has failed because of the tool itself.
 
-7. CHALLENGES ENCOUNTERED AND LESSONS LEARNED
+**7. CHALLENGES ENCOUNTERED AND LESSONS LEARNED**
 
 One of the most valuable parts of this week's practical work was troubleshooting.
 
@@ -394,21 +371,21 @@ Not everything worked as expected on the first attempt, and I had to spend time 
 
 Here are some of the challenges I encountered and what I took away from them.
 
-7.1 Network Scanning from Windows
+**Network Scanning from Windows**
 
 My initial attempt to perform the scan from Zenmap on Windows did not give me the results I expected. Some scans returned zero live hosts, and MAC address information was not available.
 
 What I learned: Before performing a network scan, I need to understand the network environment, the interface being used and whether the scanning machine is actually within the target subnet.
 
-7.2 Understanding Layer 2 and MAC Address Discovery
+**Understanding Layer 2 and MAC Address Discovery**
 
 I initially expected the scan to display the MAC addresses of all discovered hosts.
 
-However, I learned that MAC address discovery through ARP depends on the scanner's position within the local network segment.
+But, I learned that MAC address discovery through ARP depends on the scanner's position within the local network segment.
 
 What I learned: IP-based communication and MAC address resolution operate at different networking layers. Understanding the distinction is important when troubleshooting network discovery.
 
-7.3 Verifying the Kali Linux Network Configuration
+**Verifying the Kali Linux Network Configuration**
 
 Moving the scanning activity into my Kali Linux VM meant I had to verify its network configuration before proceeding.
 
@@ -420,7 +397,7 @@ This helped me confirm that the VM had the expected address of 10.0.0.3 on the 1
 
 What I learned: I should always verify the IP address, network interface and subnet before running a scan. Assuming that a virtual machine is connected to the correct network can lead to misleading results.
 
-7.4 Zenmap Topology Export Error
+**Zenmap Topology Export Error**
 
 I also encountered an error when exporting the network topology because of an incorrectly populated save path.
 
@@ -428,18 +405,18 @@ Rather than abandoning the export, I examined the path, corrected it and saved t
 
 What I learned: Even when working with graphical tools, understanding file paths and directory structures is important. Small configuration errors can prevent an otherwise successful task from being completed.
 
-7.5 Overall Experience
+**The Whole Experience**
 
-This week's exercises reminded me that practical cybersecurity involves more than knowing commands and understanding what individual tools do.
+This week's projects reminded me that practical cybersecurity involves more than knowing commands and understanding what individual tools do.
 
 Sometimes the real learning happens when something doesn't work as expected and you have to investigate the reason.
 
 I also became more comfortable moving between Windows and Kali Linux, checking network configurations and interpreting the results returned by different security tools.
 
-8. EVIDENCE AND DOCUMENTATION
+**8. EVIDENCE AND DOCUMENTATION**
 
 
-The following evidence was collected during the practical exercises to support the activities and findings documented in this report.
+The following evidence was collected during the practical tasks to support the activities and findings documented in this report.
 
 
 
@@ -471,6 +448,9 @@ Wafw00f output
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/59291f16-8706-4d68-ab18-899e6bf74409" />
 
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c6ad3fc-768a-42f9-a1c4-65276d80fb15" />
+
+
 
 
 Zenmap/Nmap Ping Scan 
@@ -484,25 +464,19 @@ The evidence files accompany this report to provide a record of the practical ac
 
 
 
-9. CONCLUSION
+**9. CONCLUSION**
 
-Completing Week 2 of my Cybersecurity Internship at Networkwalks gave me the opportunity to apply some of the concepts I had been learning to actual cybersecurity exercises.
+Completing Week 2 of my Cybersecurity Internship at Networkwalks gave me the opportunity to apply some of the concepts I had been learning to actual cybersecurity practices.
 
 Through W2-PM1, I worked with six Kali Linux tools to investigate the publicly available information associated with networkwalks.com. I was able to retrieve domain registration details, identify website technologies, resolve its IP address, inspect HTTP response headers, detect its Web Application Firewall and enumerate DNS information.
 
-W2-PM5 took me further into practical networking. I initially encountered difficulties with network discovery and MAC address identification while attempting to scan from Windows. After investigating the issue, I moved the scanning activity into my Kali Linux virtual machine, verified its network configuration and successfully performed a Ping Scan on my internal VirtualBox subnet.
-
-The scan identified three live hosts:
-
-- 10.0.0.1
-- 10.0.0.2
-- 10.0.0.3
+W2-PM5 took me more into practical networking. I initially encountered difficulties with network discovery and MAC address identification while attempting to scan from Windows. After investigating the issue, I moved the scanning activity into my Kali Linux virtual machine, verified its network configuration and successfully performed a Ping Scan on my internal VirtualBox subnet and the scan identified three live hosts.
 
 I also identified two MAC addresses, examined their virtual network interface vendors and successfully exported the network topology diagram after resolving a file path issue.
 
 Beyond completing the assigned tasks, this week's experience helped me better understand how reconnaissance, DNS resolution, host discovery, IP addressing, ARP and network topology relate to one another.
 
-Most importantly, I learned not to stop when a tool returns an unexpected result. Understanding the environment, checking configurations and troubleshooting systematically are all part of working in cybersecurity.
+And very importantly, I learned not to stop when a tool returns an unexpected result. Understanding the environment, checking configurations and troubleshooting systematically are all part of working in cybersecurity.
 
 I consider this another important step in developing my practical cybersecurity skills.
 
@@ -518,5 +492,3 @@ PROGRAMME: Cybersecurity Internship Program – Networkwalks
 PROJECT: Week 2 – Footprinting & Network Scanning
 MODULES: W2-PM1 | W2-PM5
 DATE: 13 November 2026
-
-All activities documented in this report were conducted within the scope of the authorised educational exercises.
