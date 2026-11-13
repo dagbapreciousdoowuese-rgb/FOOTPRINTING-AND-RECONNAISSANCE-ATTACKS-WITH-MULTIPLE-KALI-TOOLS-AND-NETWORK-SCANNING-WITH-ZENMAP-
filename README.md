@@ -41,24 +41,26 @@ Working within my VirtualBox lab environment, I verified the network interface, 
 
 This project gave me an opportunity to move beyond simply learning what cybersecurity tools do and actually use them, examine their outputs, troubleshoot unexpected behaviour and understand the networking concepts behind the results.
 
-3. TOOLS AND TECHNOLOGIES USED
+## 3. TOOLS AND TECHNOLOGIES USED
 
 The following tools and environments were used throughout the two modules.
 
-Tool / Environment| Purpose
-Kali Linux| Operating system used for the reconnaissance exercises and internal network scanning.
-Oracle VM VirtualBox| Provided the virtualised environment for running Kali Linux and configuring the internal lab network.
-Windows 11| Host operating system used for managing the virtual machine and initially attempting the Zenmap scan.
-WHOIS| Retrieved publicly available domain registration information, registrar details and name servers.
-WhatWeb| Identified technologies and software associated with the target website.
-nslookup| Resolved the domain name to its corresponding IP address.
-curl| Retrieved HTTP response headers from the target website.
-wafw00f| Checked for and identified Web Application Firewall protection.
-dnsrecon| Enumerated publicly available DNS records.
-Zenmap| Provided a graphical interface for configuring and viewing Nmap scans.
-Nmap| Performed host discovery across the internal lab subnet.
-iproute2 ("ip addr show")| Helped me inspect the network interfaces and IP configuration of my Kali VM.
-Windows Command Prompt ("ipconfig")| Used to inspect the Windows host's network configuration.
+| Tool / Environment | Purpose |
+| :--- | :--- |
+| **Kali Linux** | Operating system used for the reconnaissance exercises and internal network scanning. |
+| **Oracle VM VirtualBox** | Provided the virtualised environment for running Kali Linux and configuring the internal lab network. |
+| **Windows 11** | Host operating system used for managing the virtual machine and initially attempting the Zenmap scan. |
+| **WHOIS** | Retrieved publicly available domain registration information, registrar details and name servers. |
+| **WhatWeb** | Identified technologies and software associated with the target website. |
+| **nslookup** | Resolved the domain name to its corresponding IP address. |
+| **curl** | Retrieved HTTP response headers from the target website. |
+| **wafw00f** | Checked for and identified Web Application Firewall protection. |
+| **dnsrecon** | Enumerated publicly available DNS records. |
+| **Zenmap** | Provided a graphical interface for configuring and viewing Nmap scans. |
+| **Nmap** | Performed host discovery across the internal lab subnet. |
+| **iproute2 (`ip addr show`)** | Helped me inspect the network interfaces and IP configuration of my Kali VM. |
+| **Windows Command Prompt (`ipconfig`)** | Used to inspect the Windows host's network configuration. |
+
 
 4. ACTIVITIES PERFORMED
 
