@@ -1,5 +1,4 @@
- FOOTPRINTING-AND-RECONNAISSANCE-ATTACKS-WITH-MULTIPLE-KALI-TOOLS-AND-NETWORK-SCANNING-WITH-ZENMAP
-
+Footprinting And ReconnaissanceAttacks With Multiple Kali Tools And Network Scanning With Zenmap
 
 Cybersecurity Internship Program — NETWORKWALKS
 
