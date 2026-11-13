@@ -76,7 +76,7 @@ I carried out the following activities.
 
 I started with WHOIS to retrieve the publicly available registration information associated with networkwalks.com.
 
-**Command executed:**
+Command executed:
 
 ```bash
 whois networkwalks.com
