@@ -84,6 +84,12 @@ whatweb networkwalks.com
 
 
 
+
+
+
+
+
+
 The output provided information about the domain registrar, registration and expiry dates, domain status and authoritative name servers.
 
 Some of the details I identified were:
