@@ -5,17 +5,17 @@ Cybersecurity Internship Program — NETWORKWALKS
 
 
 
-Field| Details
-Pentester Name| Precious Doowuese Dagba
-Programme| Cybersecurity Internship Program – Networkwalks
-Week| Week 2
-Date| 13 November 2026
-Modules Completed| W2-PM1 and W2-PM5
-Target 1| networkwalks.com (authorised assessment)
-Target 2| Internal VirtualBox Lab Network (10.0.0.0/24)
-Permission| Authorisation secured for the assessment activities
-Phases Covered| Phase 1: Reconnaissance & Footprinting; Phase 2: Network Scanning & Discovery
-Other Phases| Phases 3–5: In Progress
+
+| Field | Detail |
+| :--- | :--- |
+| **Pentester Name (Cybersecurity Professional)** | Precious Doowuese Dagba |
+| **Program/Batch** | Cybersecurity Internship Program — Networkwalks |
+| **Date** | 13 November 2026 |
+| **Modules completed** | W2-PM1 (Multiple Kali Tools) and W2-PM5 (Zenmap Scanning) |
+| **Client/Target** | 1. Networkwalks (`networkwalks.com`, the target assigned in the module instructions), 2. My own local lab network (`10.0.0.0/24`) |
+| **Permission secured from client?** | Yes |
+| **Phases covered** | Phase 1: Reconnaissance & Footprinting, Phase 2: Scanning & Network Discovery, Phase 3–5: In Progress |
+
 
 ---
 
